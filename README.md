@@ -99,6 +99,7 @@ go test ./...
 ```
 **Get Loan By ID**
 - Endpoint: GET /v1/loans/:id
+
 **List Loans**
 - Endpoint: GET /v1/loans
 - Query Parameter:
