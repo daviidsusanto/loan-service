@@ -11,5 +11,10 @@ This is a Loan Service built using the Go Gin framework, PostgreSQL, and GORM. I
 
 ## **Requirements**
 - Go (1.18 or higher)
-- PostgreSQL
+- PostgreSQL 15
 - Docker (optional, for database container)
+
+## **Setup**
+1. Clone the Repository
+```git clone https://github.com/daviidsusanto/loan-service.git
+cd loan-service`
