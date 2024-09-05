@@ -56,15 +56,51 @@ go test ./...
 ```
 
 ## **API Endpoints**
-**Create a Loan**
--Endpoint: POST /v1/loans
--Request Body:
+**Create Loan**
+- Endpoint: POST /v1/loans
+- Request Body:
 ```
 {
-  "borrower_id": "string",
-  "principal_amount": 1000.0,
+  "borrower_id": "user-123",
+  "principal_amount": 10000.0,
   "rate": 5.0,
-  "roi": 2.0,
-  "agreement_letter": "string"
+  "roi": 10.0,
+  "aggrement_letter": "www.example.com/aggrement-letter.pdf"
 }
 ```
+**Approve Loan**
+- Endpoint: PUT /v1/loans/:id/approve
+- Request Body:
+```
+{
+  "field_validator_id": "validator-001",
+  "approval_date": "2024-09-03",
+  "proof_of_visit": "https://example.com/proof-of-visit.jpg"
+}
+```
+**Record Investment**
+- Endpoint: PUT /v1/loans/:id/invest
+- Request Body:
+```
+{
+  "investor": "investor-001",
+  "amount": 10000
+}
+```
+**Disburse Loan**
+- Endpoint: PUT /v1/loans/:id/disburse
+- Request Body:
+```
+{
+  "agreement_letter": "https://example.com/signed-agreement.pdf",
+  "field_officer_id": "field-officer-001",
+  "disbursement_date": "2024-09-03"
+}
+```
+**Get Loan By ID**
+- Endpoint: GET /v1/loans/:id
+**List Loans**
+- Endpoint: GET /v1/loans
+- Query Parameter:
+    * limit: Number of loans to return (default: 10)
+    * offset: Pagination offset (default: 0)
