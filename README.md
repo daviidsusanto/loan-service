@@ -20,3 +20,51 @@ This is a Loan Service built using the Go Gin framework, PostgreSQL, and GORM. I
 git clone https://github.com/daviidsusanto/loan-service.git
 cd loan-service
 ```
+2. Set Up Environment Variables
+Create a .env file in the root directory of the project with the following content:
+```
+POSTGRES_USER=youruser
+POSTGRES_PASSWORD=yourpassword
+POSTGRES_DB=yourdb
+
+DB_HOST=postgres
+DB_PORT=5432
+DB_USER=youruser
+DB_PASSWORD=yourpassword
+DB_NAME=yourdbname
+```
+3. Running Docker
+To build and run the services, use:
+```
+docker-compose up --build
+```
+To run in detached mode, use:
+```
+docker-compose up -d --build
+```
+To stop and remove containers, networks, and volumes, use:
+```
+docker-compose down
+```
+4. Accessing API
+To access API Endpoint you can access URL : http://localhost:8080/
+
+## **Testing**
+To run tests, use:
+```
+go test ./...
+```
+
+## **API Endpoints**
+**Create a Loan**
+-Endpoint: POST /v1/loans
+-Request Body:
+```
+{
+  "borrower_id": "string",
+  "principal_amount": 1000.0,
+  "rate": 5.0,
+  "roi": 2.0,
+  "agreement_letter": "string"
+}
+```
