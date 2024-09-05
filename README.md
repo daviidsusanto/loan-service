@@ -16,5 +16,7 @@ This is a Loan Service built using the Go Gin framework, PostgreSQL, and GORM. I
 
 ## **Setup**
 1. Clone the Repository
-```git clone https://github.com/daviidsusanto/loan-service.git
-cd loan-service`
+```
+git clone https://github.com/daviidsusanto/loan-service.git
+cd loan-service
+```
